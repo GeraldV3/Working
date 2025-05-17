@@ -1,0 +1,34 @@
+{
+  "cli": {
+    "version": ">= 14.4.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "autoIncrement": true,
+      "env": {
+        "EXPO_ROUTER_APP_ROOT": "./app",
+        "EXPO_ROUTER_BUNDLER": "metro",
+        "EXPO_ROUTER_ORIGIN": "exp://192.168.254.102:8082",
+        "EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY": "pk_test_YnVzeS1tZWVya2F0LTY5LmNsZXJrLmFjY291bnRzLmRldiQ",
+        "CLERK_SECRET_KEY": "sk_test_o1skYlML60kneroNJ152EyociuyluAt5ssgrYGSnpe",
+        "EXPO_PUBLIC_SERVER_URL": "https://projecteyes.com",
+        "YOUR_PUBLIC_BUILDER_KEY": "959ba9cb23ea4b99af92ad0ea382f16d"
+      },
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
